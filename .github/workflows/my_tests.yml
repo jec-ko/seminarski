@@ -56,7 +56,7 @@ jobs:
     - name: Run Valgrind Memcheck
       run: |
         cd valgrind
-        ./run_valgrind.sh
+        ./run_valgrind_test.sh
 
     #  AFL++ fuzzing
     - name: Run AFL++
