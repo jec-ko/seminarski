@@ -53,10 +53,13 @@ jobs:
         ./runa_asan_test.sh
 
     #  Valgrind Memcheck testovi
+    - name: Install Valgrind
+    run: sudo apt-get update && sudo apt-get install -y valgrind
+
     - name: Run Valgrind Memcheck
-      run: |
-        cd valgrind
-        ./run_valgrind_test.sh
+    run: |
+       cd valgrind
+      ./run_valgrind_test.sh
 
     #  AFL++ fuzzing
     - name: Run AFL++
